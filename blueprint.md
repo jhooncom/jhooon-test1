@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple web application that generates 6 random lotto numbers between 1 and 45. The application is built using modern web standards, including Web Components.
+A simple web application that generates 6 random lotto numbers between 1 and 45. It also includes a partnership inquiry form powered by Formspree. The application is built using modern web standards, including Web Components.
 
 ## Design and Features
 
@@ -12,16 +12,23 @@ A simple web application that generates 6 random lotto numbers between 1 and 45.
 *   **Technology:** Plain HTML, CSS, and JavaScript with a Web Component for the lotto generator.
 *   **Styling:** Minimal styling with a plain background and basic colors.
 
-### Current Plan: Design Refresh
+### Design Refresh
 
-*   **Modernize the Look and Feel:**
-    *   **Typography:** Use the "Poppins" font from Google Fonts.
-    *   **Color Palette:** Introduce a gradient background, and a more vibrant color scheme.
-    *   **Layout:** Center the content and use a card-based design.
-*   **Enhance User Experience (UX):**
-    *   **Animations:** Add a fade-in animation for the generated numbers.
-    *   **Button Hover Effects:** Add a more noticeable hover effect for the button.
-    *   **Responsive Design:** Ensure the application is responsive and looks good on mobile devices.
+*   **Modernized Look and Feel:**
+    *   **Typography:** Uses the "Poppins" font from Google Fonts.
+    *   **Color Palette:** Features a vibrant gradient background and a modern color scheme.
+    *   **Layout:** Centered content with a card-based design for the main container.
+*   **Enhanced User Experience (UX):**
+    *   **Animations:** Includes a fade-in animation for the generated numbers.
+    *   **Button Hover Effects:** Improved hover effects for interactive buttons.
+    *   **Responsive Design:** Ensures the application is responsive across various screen sizes.
 *   **Code Refinements:**
-    *   **CSS Variables:** Use CSS variables for the color palette.
-    *   **Encapsulation:** Move all component-specific styles into the Shadow DOM of the `lotto-generator` component.
+    *   **CSS Variables:** Utilizes CSS variables for easy theme customization.
+    *   **Encapsulation:** Component-specific styles are encapsulated within the Shadow DOM of the `lotto-generator` component.
+
+### Partnership Inquiry Form
+
+*   **Functionality:** Provides a contact form for users to send partnership inquiries.
+*   **Technology:** Integrated with Formspree for handling form submissions to the endpoint `https://formspree.io/f/xjgerklr`.
+*   **Fields:** Includes fields for Name, Email, and Message.
+*   **Styling:** Styled to be consistent with the overall modern design of the application.
