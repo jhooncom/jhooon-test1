@@ -27,19 +27,33 @@ body {
 }
 
 /* Pet Face Test Styles */
-#webcam-container {
+#image-preview-container {
     margin: 2em auto;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--primary-color);
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
 }
 
 #label-container {
     margin-top: 1em;
     font-size: 1.2em;
     font-weight: 600;
+}
+
+#image-upload {
+    margin-top: 1em;
 }
 
 /* Form Styles */
