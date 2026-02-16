@@ -21,6 +21,9 @@ A multifaceted web application that includes a Lotto Number Generator, a Pet Fac
     *   The user selects an image file using a file input.
     *   A preview of the selected image is displayed.
     *   The model automatically runs a prediction on the uploaded image.
+*   **Bug Fix:**
+    *   **Issue:** The prediction results were the same for all images because the prediction was running before the new image was fully rendered.
+    *   **Solution:** The `predict()` function is now called in the `onload` event of the preview image, ensuring the model runs on the fully loaded image.
 *   **Styling:** The image preview and prediction labels are styled to integrate with the overall design.
 
 ### Partnership Inquiry Form

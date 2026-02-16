@@ -20,7 +20,7 @@
         <p>Upload an image to see if you have a cat or a dog face!</p>
         <input type="file" id="image-upload" accept="image/*" onchange="readImage(this);">
         <div id="image-preview-container">
-            <img id="image-preview" src="#" alt="Image Preview">
+            <img id="image-preview" src="#" alt="Image Preview" onload="predict();">
         </div>
         <div id="label-container"></div>
 
@@ -107,7 +107,6 @@
                     const imagePreview = document.getElementById("image-preview");
                     imagePreview.setAttribute('src', e.target.result);
                     imagePreview.style.display = 'block';
-                    predict();
                 };
                 reader.readAsDataURL(input.files[0]);
             }
