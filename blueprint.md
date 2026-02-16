@@ -37,5 +37,5 @@ A simple web application that generates 6 random lotto numbers between 1 and 45.
 
 *   **Functionality:** Provides a comments section for user discussions.
 *   **Technology:** Integrated with Disqus using the universal embed code.
-*   **Configuration:** Requires the user to replace the placeholder `YOUR_SHORTNAME_HERE` with their own Disqus shortname.
+*   **Configuration:** Uses the Disqus shortname `jtjtjtj`.
 *   **Styling:** Styled to be consistent with the overall design of the application.
