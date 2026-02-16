@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple web application that generates 6 random lotto numbers between 1 and 45. It also includes a partnership inquiry form powered by Formspree. The application is built using modern web standards, including Web Components.
+A simple web application that generates 6 random lotto numbers between 1 and 45. It also includes a partnership inquiry form powered by Formspree and a comments section powered by Disqus. The application is built using modern web standards, including Web Components.
 
 ## Design and Features
 
@@ -32,3 +32,10 @@ A simple web application that generates 6 random lotto numbers between 1 and 45.
 *   **Technology:** Integrated with Formspree for handling form submissions to the endpoint `https://formspree.io/f/xjgerklr`.
 *   **Fields:** Includes fields for Name, Email, and Message.
 *   **Styling:** Styled to be consistent with the overall modern design of the application.
+
+### Comments Section
+
+*   **Functionality:** Provides a comments section for user discussions.
+*   **Technology:** Integrated with Disqus using the universal embed code.
+*   **Configuration:** Requires the user to replace the placeholder `YOUR_SHORTNAME_HERE` with their own Disqus shortname.
+*   **Styling:** Styled to be consistent with the overall design of the application.
