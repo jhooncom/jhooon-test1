@@ -1,160 +1,40 @@
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-gradient: linear-gradient(to right, #6a11cb, #2575fc);
-    --card-background: #ffffff;
-    --text-color: #333;
-    --light-text-color: #fff;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--background-gradient);
-    margin: 0;
-}
-
-.container {
-    background: var(--card-background);
-    padding: 2em;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 90%;
-}
-
-/* Pet Face Test Styles */
-#image-preview-container {
-    margin: 2em auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed var(--primary-color);
-}
-
-#image-preview {
-    max-width: 100%;
-    max-height: 100%;
-    display: none;
-}
-
-#label-container {
-    margin-top: 1em;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-#image-upload {
-    margin-top: 1em;
-}
-
-/* Form Styles */
-.contact-form {
-    margin-top: 2em;
-    text-align: left;
-}
-
-.contact-form h2 {
-    text-align: center;
-    color: var(--text-color);
-    margin-bottom: 1em;
-}
-
-.contact-form p {
-    text-align: center;
-    color: var(--text-color);
-    margin-bottom: 2em;
-}
-
-.form-group {
-    margin-bottom: 1.5em;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5em;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    box-sizing: border-box; /* Include padding in width */
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 5px rgba(var(--primary-color-rgb-values), 0.5);
-}
-
-.contact-form button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+/* Custom styles for 3D button and animations */
+.btn-3d {
+    position: relative;
+    background: #8B5CF6; /* violet-500 */
     border: none;
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 5px #6D28D9; /* violet-700 */
+    transition: all 0.1s ease-in-out;
 }
 
-.contact-form button[type="submit"]:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.btn-3d:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #6D28D9; /* violet-700 */
 }
 
-.contact-form button[type="submit"]:active {
-    transform: translateY(0);
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .container {
-        padding: 1.5em;
+@keyframes number-pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
     }
-
-    h1 {
-        font-size: 1.8em;
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
     }
-
-    .lotto-generator .number {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-    }
-
-    .lotto-generator button {
-        padding: 12px 25px;
-        font-size: 18px;
-    }
-
-    .contact-form button[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+    100% {
+        transform: scale(1);
     }
 }
 
-#disqus_thread {
-    margin-top: 2em;
+.number-pop-animation {
+    animation: number-pop 0.5s ease-out;
 }

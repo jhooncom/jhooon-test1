@@ -2,38 +2,44 @@
 
 ## Overview
 
-A multifaceted web application that includes a Lotto Number Generator, a Pet Face Test, a partnership inquiry form, and a comments section. The application is built using modern web standards, including Web Components and TensorFlow.js.
+A multifaceted web application featuring a Lotto Number Generator, a Pet Face Test, a partnership inquiry form, and a comments section. The entire application has been redesigned with Tailwind CSS to have a modern, mobile-app-inspired look and feel.
 
-## Design and Features
+## Core Technologies
+
+*   **Styling:** Tailwind CSS for a utility-first design system.
+*   **Components:** Web Components for the Lotto Generator.
+*   **Machine Learning:** TensorFlow.js for the Pet Face Test.
+*   **Backend Services:** Formspree for the contact form and Disqus for comments.
+
+## Design System
+
+*   **Theme:** Modern, clean, mobile-first aesthetic.
+*   **Color Palette:** A light purple (violet) theme is used throughout the application for backgrounds, text, and UI elements.
+*   **Buttons:** Feature a custom 3D effect for a tactile feel.
+*   **Animations:** Subtle animations are used to enhance user experience, such as a "pop" effect for the generated lotto numbers.
+
+## Features
 
 ### Lotto Number Generator
 
 *   **Functionality:** Generates 6 unique random numbers between 1 and 45.
-*   **Technology:** Implemented as a Web Component.
+*   **Design:**
+    *   Numbers are displayed in styled circles with a pop-in animation.
+    *   The "Generate" button has a prominent 3D design.
 
 ### Pet Face Test
 
-*   **Functionality:** Classifies a user's uploaded image as either a "dog" or a "cat" face, based on a trained Teachable Machine model.
-*   **Technology:**
-    *   TensorFlow.js and the Teachable Machine Image library for model loading and prediction.
-    *   The model is loaded from `https://teachablemachine.withgoogle.com/models/K6Im9VGeV/`.
-*   **User Interaction:**
-    *   The user selects an image file using a file input.
-    *   A preview of the selected image is displayed.
-    *   The model automatically runs a prediction on the uploaded image.
-*   **Bug Fix:**
-    *   **Issue:** The prediction results were the same for all images because the prediction was running before the new image was fully rendered.
-    *   **Solution:** The `predict()` function is now called in the `onload` event of the preview image, ensuring the model runs on the fully loaded image.
-*   **Styling:** The image preview and prediction labels are styled to integrate with the overall design.
+*   **Functionality:** Classifies a user's uploaded image as a "dog" or "cat" face.
+*   **Design:**
+    *   A styled file input for image uploads.
+    *   A preview of the uploaded image is displayed in a styled container.
+    *   Prediction results are clearly displayed below the image.
 
 ### Partnership Inquiry Form
 
-*   **Functionality:** Provides a contact form for users to send partnership inquiries.
-*   **Technology:** Integrated with Formspree.
-*   **Fields:** Includes fields for Name, Email, and Message.
+*   **Functionality:** A contact form for partnership inquiries.
+*   **Design:** Styled with Tailwind CSS for a clean, modern look that matches the overall application theme.
 
 ### Comments Section
 
-*   **Functionality:** Provides a comments section for user discussions.
-*   **Technology:** Integrated with Disqus.
-*   **Configuration:** Uses the Disqus shortname `jtjtjtj`.
+*   **Functionality:** A comments section for user discussions, powered by Disqus.
